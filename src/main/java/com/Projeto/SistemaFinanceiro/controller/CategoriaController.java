@@ -7,6 +7,7 @@ import com.Projeto.SistemaFinanceiro.domain.detalhamento.DadosDetalhamentoPessoa
 import com.Projeto.SistemaFinanceiro.domain.listagem.DadosListagemCategoria;
 import com.Projeto.SistemaFinanceiro.domain.model.Categoria;
 import com.Projeto.SistemaFinanceiro.domain.model.Categoria;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,6 +21,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/categorias")
+@SecurityRequirement(name = "bearer-key")
 public class CategoriaController {
 
     @Autowired

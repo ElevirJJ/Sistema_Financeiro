@@ -5,6 +5,7 @@ import com.Projeto.SistemaFinanceiro.domain.cadastro.DadosCadastroLancamento;
 import com.Projeto.SistemaFinanceiro.domain.detalhamento.DadosDetalhamentoLancamento;
 import com.Projeto.SistemaFinanceiro.domain.detalhamento.DadosDetalhamentoPessoa;
 import com.Projeto.SistemaFinanceiro.domain.listagem.DadosListagemLancamento;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -19,6 +20,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/lancamentos")
+@SecurityRequirement(name = "bearer-key")
 public class LancamentoController {
 
     @Autowired

@@ -4,6 +4,7 @@ import com.Projeto.SistemaFinanceiro.domain.atualizacao.DadosAtualizacaoPessoa;
 import com.Projeto.SistemaFinanceiro.domain.cadastro.DadosCadastroPessoa;
 import com.Projeto.SistemaFinanceiro.domain.detalhamento.DadosDetalhamentoPessoa;
 import com.Projeto.SistemaFinanceiro.domain.listagem.DadosListagemPessoa;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,14 +19,14 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/pessoas")
+@SecurityRequirement(name = "bearer-key")
 public class PessoaController {
 
-    @Autowired // é usada para injetar um objeto gerenciado pelo Spring em outra classe.
+    @Autowired
     private PessoaRepository pessoaRepository;
 
     @PostMapping
-    @Transactional // É um método como transacional, o que significa que todas as operações
-    // de banco de dados realizadas dentro dele serão tratadas como uma única transação.
+    @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroPessoa dados, UriComponentsBuilder uriBuilder) {
         var pessoa = new Pessoa(dados);
         pessoaRepository.save(pessoa);

@@ -1,4 +1,4 @@
-package com.Projeto.SistemaFinanceiro.infra;
+package com.Projeto.SistemaFinanceiro.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
