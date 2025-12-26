@@ -41,4 +41,17 @@ Clone esse repositorio na sua maquina:
 git clone https://github.com/ElevirJJ/Sistema_Financeiro.git
 Altere a senha e configure o banco de dados
 
+JSON:
+
+Pessoa:
+<img width="182" height="191" alt="image" src="https://github.com/user-attachments/assets/e76be768-7f7e-4ad9-8a65-05b118184e01" />
+
+Lancamento:
+<img width="231" height="234" alt="image" src="https://github.com/user-attachments/assets/e4f209ab-5952-419e-a37f-52bece1585ff" />
+
+Categoria:
+<img width="138" height="51" alt="image" src="https://github.com/user-attachments/assets/432c948d-71f8-4211-acc2-c92dc51f3702" />
+
+Usuario:
+<img width="238" height="65" alt="image" src="https://github.com/user-attachments/assets/520aa800-0631-4152-8623-b0b01edcc8a1" />
 
